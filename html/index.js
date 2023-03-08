@@ -2,6 +2,14 @@ window.addEventListener("message", function(event) {
 	const data = event.data;
 	const callback = data.callback;
 
+	var item = event.data;
+
+	if (item.showUI) {
+        $('.content').show();
+    } else {
+        $('.content').hide();
+    }
+
 	if (callback != undefined) {
 		const func = window[callback.type];
 		if (func != undefined) {

@@ -249,3 +249,14 @@ end, true)]]--
 RegisterNetEvent('vehicleDebug', function()
 	Debugger:Focus(not Debugger.hasFocus)
 end)
+
+local ui = false;
+
+RegisterNetEvent('vehicleDebugShow', function()
+    ui = not ui 
+    if ui then 
+        SendNUIMessage({showUI = true; }) -- Sends a message to the js file. 
+    else     
+        SendNUIMessage({showUI = false; }) -- Sends a message to the js file.
+    end 
+end)

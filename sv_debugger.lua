@@ -5,3 +5,11 @@ RegisterCommand("vdb", function(source)
         TriggerClientEvent("chatMessage", source, "^1Insufficient Permissions.")
     end
 end)
+
+RegisterCommand("vdbshow", function(source)
+    if IsPlayerAceAllowed(source, "admin") then
+        TriggerClientEvent("vehicleDebugShow", source)
+    else
+        TriggerClientEvent("chatMessage", source, "^1Insufficient Permissions.")
+    end
+end)
