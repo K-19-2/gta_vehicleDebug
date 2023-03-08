@@ -5,9 +5,9 @@ window.addEventListener("message", function(event) {
 	var item = event.data;
 
 	if (item.showUI) {
-        $('.content').show();
+        $('body').show();
     } else {
-        $('.content').hide();
+        $('body').hide();
     }
 
 	if (callback != undefined) {
