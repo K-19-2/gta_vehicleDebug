@@ -241,9 +241,11 @@ RegisterNUICallback("resetStats", function(data, cb)
 	Debugger:ResetStats()
 end)
 
---[[ Commands ]]--
+--[[ Commands 
 RegisterCommand("+vehicleDebug", function()
 	Debugger:Focus(not Debugger.hasFocus)
-end, true)
+end, true)]]--
 
-RegisterKeyMapping("+vehicleDebug", "Vehicle Debugger", "keyboard", "lmenu")
+RegisterNetEvent('vehicleDebug', function()
+	Debugger:Focus(not Debugger.hasFocus)
+end)
